@@ -3,27 +3,33 @@ package _04.estruturarepetitivas.lab;
 import java.util.Scanner;
 
 public class Exer07While {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-
-		int x = 1;
-		int cont=0, soma=0;
-
-		while (x != 0) {
-
-			System.out.print("Digite um número inteiro: ");
-			x = sc.nextInt();
-			
-			while(cont< 5 ) {
-			if(x  %2==0)	{
-			soma=	x +=2;
-				cont++;
-			}
-			
-			}
-		}
-		System.out.println("SOma = "+soma);
-
-		sc.close();
-	}
+	 public static void main(String[] args) {
+	        Scanner sc = new Scanner(System.in);
+	         
+	        int contadorY = 1, soma = 0, armazenaX = 0;
+	        while(true)
+	        {
+	         System.out.print("Digite um numero inteiro: ");
+	        	int x = sc.nextInt();
+	                armazenaX = x;
+	                if(x % 2 == 0)
+	                    soma += x;
+	                else{
+	                    armazenaX = x + 1;
+	                    soma+= armazenaX;
+	                }
+	                while(contadorY < 5)
+	                {
+	                    armazenaX += 2;
+	                    soma += armazenaX;
+	                    contadorY++;
+	                }   
+	                if(x == 0)
+	                    break;
+	                System.out.println(soma);
+	                contadorY = 1;
+	                soma = 0;                
+	        }
+	        sc.close();
+	    }
 }
