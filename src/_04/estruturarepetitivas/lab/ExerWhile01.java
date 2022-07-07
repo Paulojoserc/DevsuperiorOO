@@ -2,7 +2,7 @@ package _04.estruturarepetitivas.lab;
 
 import java.util.Scanner;
 
-public class Exer01While {
+public class ExerWhile01 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int x = 0;
