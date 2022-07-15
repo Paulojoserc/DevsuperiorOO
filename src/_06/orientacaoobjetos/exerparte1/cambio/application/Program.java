@@ -18,7 +18,7 @@ public static void main(String[] args) {
 	System.out.print("Quantos dólares serão comprados? ");
 	dolar.dolarComprado = sc.nextDouble();
 	
-	System.out.print("Valor a ser pago em reais = "+dolar.cambio());
+	System.out.print("Valor a ser pago em reais = "+dolar.compra());
 	
 	sc.close();
 }

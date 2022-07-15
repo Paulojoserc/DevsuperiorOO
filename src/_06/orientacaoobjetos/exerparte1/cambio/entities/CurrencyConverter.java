@@ -6,12 +6,13 @@ public class CurrencyConverter {
 	public double valorDolar;
 	public double dolarComprado;
 
-	public double cambio() {
-		return dolarComprado * valorDolar  + IOF.taxa();
+	public double compra() {
+		return dolarComprado * valorDolar * IOF.taxa() + dolarComprado * valorDolar;
 
 	}
+	
 
 	public String toString() {
-		return "Valor a ser pago em reais = " + String.format("%.2f%n", cambio());
+		return "Valor a ser pago em reais = " + String.format("%.2f%n", compra());
 	}
 }
