@@ -3,8 +3,6 @@ package _06.orientacaoobjetos.exerparte1.alunos.application;
 import java.util.Locale;
 import java.util.Scanner;
 
-import javax.print.attribute.standard.Media;
-
 import _06.orientacaoobjetos.exerparte1.alunos.entities.Student;
 
 public class Program {
