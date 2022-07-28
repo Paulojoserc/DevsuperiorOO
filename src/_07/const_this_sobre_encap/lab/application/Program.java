@@ -10,7 +10,7 @@ public class Program {
 public static void main(String[] args) {
 	Locale.setDefault(Locale.US);
 	Scanner sc = new Scanner(System.in);
-	Account account = null;
+	Account account ;
 	
 	
 	System.out.print("Enter account number: ");
@@ -24,8 +24,8 @@ public static void main(String[] args) {
 	
 	if(resposta == 'y') {
 		System.out.print("Enter initial deposit value: ");
-		double deposito = sc.nextDouble();
-		account = new Account(resposta, name, deposito);
+		double depositoInicial = sc.nextDouble();
+		account = new Account(resposta, name, depositoInicial);
 	}else {
 	 account = new Account(resposta, name);
 	}
@@ -36,12 +36,14 @@ public static void main(String[] args) {
 	System.out.println();
 	System.out.print("Enter a deposit value: ");
 	double deposito = sc.nextDouble();
+	account.deposito(deposito);
 	System.out.println("Account data:");
 	System.out.println(account);
 	
 	System.out.println();
 	System.out.print("Enter a withdraw value: ");
 	double sacar = sc.nextDouble();
+	account.sacar(sacar);
 	System.out.println("Account data:");
 	System.out.println(account);
 	

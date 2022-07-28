@@ -1,11 +1,9 @@
 package _07.const_this_sobre_encap.lab.entities;
 
-import _07.const_this_sobre_encap.lab.util.TaxaSaque;
-
 public class Account {
 	private int numAccount;
 	private String name;
-	private double saldo;
+	private double saldoConta;
 
 	public Account() {
 	}
@@ -14,10 +12,14 @@ public class Account {
 		this.numAccount = numAccount;
 		this.name = name;
 	}
-	public Account(int numAccount, String name, double saldo) {
+	public Account(int numAccount, String name, double depositoInicial) {
 		this.numAccount = numAccount;
 		this.name = name;
-		this.saldo = saldo;
+		deposito(depositoInicial);
+	}
+	
+	public int getAccount() {
+		return numAccount;
 	}
 
 	public String getName() {
@@ -28,24 +30,17 @@ public class Account {
 		this.name = name;
 	}
 
-	public double getSaldo() {
-		return saldo;
+	public double getSaldoConta() {
+		return saldoConta;
 	}
 
-	public void setSaldo(double saldo) {
-		this.saldo = saldo;
-	}
-
-	public int getAccount() {
-		return numAccount;
-	}
-
+		
 	public void deposito(double saldo) {
-		this.saldo += saldo;
+		this.saldoConta += saldo;
 	}
 
 	public void sacar(double saldo ) {
-		this.saldo -= saldo ;
+		this.saldoConta -= saldo +5.0;
 	}
 	
 	public String toString() {
@@ -54,7 +49,7 @@ public class Account {
 				+", Holder: "
 				+getName()
 				+", Balance: $ "
-				+String.format("%.2f%n", getSaldo());
+				+String.format("%.2f%n", saldoConta);
 	}
 
 }
