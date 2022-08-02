@@ -3,8 +3,6 @@ package _08.memoria_vetor_lista.vetor.lab.alturas.application;
 import java.util.Locale;
 import java.util.Scanner;
 
-import _08.memoria_vetor_lista.vetor.lab.alturas.entities.Pessoas;
-
 public class Program {
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
