@@ -28,11 +28,37 @@ public static void main(String[] args) {
 	}
 	
 	for (int i =0; i<num; i++) {
-		vectPorcentagem[i] = (vectVVenda[i] - vectVCompra[i]) / vectVCompra[i]/100;
+		vectPorcentagem[i] = (vectVVenda[i] - vectVCompra[i]) / vectVCompra[i] * 100;
 	}
 	
+	int abaixo=0, entre=0, acima=0;
 	
+	for (int i=0; i<num; i++) {
+		if (vectPorcentagem[i]<10.0) {
+			abaixo++;
+		}
+		else if (vectPorcentagem[i]<20.0) {
+			entre++;
+		}else {
+			acima++;
+		}
+	}
 	
+	double vTotalCompra =0, vTotalVenda=0, lucroTotal;
+	
+	for (int i =0; i<num; i++) {
+		vTotalCompra += vectVCompra[i];
+		vTotalVenda+= vectVVenda[i];
+	}
+	lucroTotal = vTotalVenda - vTotalCompra;
+	
+	  System.out.println("\nRELATORIO:");
+	    System.out.printf("Lucro abaixo de 10%%: %d\n", abaixo);
+	    System.out.printf("Lucro entre 10%% e 20%%: %d\n", entre);
+	    System.out.printf("Lucro acima de 20%%: %d\n", acima);
+	    System.out.printf("Valor total de compra: %.2f\n", vTotalCompra);
+	    System.out.printf("Valor total de venda: %.2f\n", vTotalVenda);
+	    System.out.printf("Lucro total: %.2f\n", lucroTotal);
 	
 	sc.close();
 }
