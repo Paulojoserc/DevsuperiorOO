@@ -1,4 +1,4 @@
-package _12.heranca_polimorfismo.UpDowncasting.entites;
+package _12.heranca_polimorfismo.override.entites;
 
 public class SavingsAccount extends Account {
 	private Double interestRate;
@@ -18,9 +18,13 @@ public class SavingsAccount extends Account {
 	public void setInterestRate(Double interestRate) {
 		this.interestRate = interestRate;
 	}
-		
+	
+	
 	public void updateBalance() {
 		balance += balance * interestRate;
 	}
-	
+	@Override
+	public void  withdraw(double amount) {
+		balance -=amount;
+	}
 }
