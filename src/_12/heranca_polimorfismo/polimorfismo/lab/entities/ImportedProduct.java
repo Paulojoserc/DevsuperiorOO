@@ -1,6 +1,8 @@
 package _12.heranca_polimorfismo.polimorfismo.lab.entities;
 
 public class ImportedProduct extends Product {
+	
+	
 	public Double customsFee;
 
 	public ImportedProduct() {
@@ -18,8 +20,11 @@ public class ImportedProduct extends Product {
 	
 	@Override
 	public String priceTag() {
-		return getName() +" $ "
+		return getName() 
+						+" $ "
 						+ String.format("%.2f", totalPrice()) 
-						+  "(Customs fee: $ "+ customsFee+")";
+						+  "(Customs fee: $ "
+						+ String.format("%.2f",  customsFee)
+						+")";
 	}
 }
