@@ -1,4 +1,4 @@
-package _15.interfaces.exemplo_sem_interface.application;
+package _15.interfaces.exemplo_com_interface.application;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -6,14 +6,14 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
 
-import _15.interfaces.exemplo_sem_interface.entiteis.CarRental;
-import _15.interfaces.exemplo_sem_interface.entiteis.Vehicle;
-import _15.interfaces.exemplo_sem_interface.services.BrazilTaxService;
-import _15.interfaces.exemplo_sem_interface.services.RentalService;
+import _15.interfaces.exemplo_com_interface.entiteis.CarRental;
+import _15.interfaces.exemplo_com_interface.entiteis.Vehicle;
+import _15.interfaces.exemplo_com_interface.services.BrazilTaxService;
+import _15.interfaces.exemplo_com_interface.services.RentalService;
 
 public class Program {
 public static void main(String[] args) throws ParseException {
-	Locale.setDefault(Locale.US);
+Locale.setDefault(Locale.US);
 	
 	Scanner sc = new Scanner(System.in);
 	

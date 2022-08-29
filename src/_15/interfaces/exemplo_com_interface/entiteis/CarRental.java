@@ -1,6 +1,8 @@
-package _15.interfaces.exemplo_sem_interface.entiteis;
+package _15.interfaces.exemplo_com_interface.entiteis;
 
 import java.util.Date;
+
+
 
 public class CarRental {
 	private Date start;
