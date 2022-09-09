@@ -1,40 +1,43 @@
-package _16.generics_set_map.set.exerc.application;
+package _16.generics_set_map.map.lab.application;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.time.Instant;
-import java.util.Date;
-import java.util.HashSet;
+import java.util.Map;
 import java.util.Scanner;
-import java.util.Set;
-
-import _16.generics_set_map.set.exerc.modal.entities.LogEntry;
+import java.util.TreeMap;
 
 public class Program {
 public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);
-	
+	Map<String, Integer> votes = new TreeMap<>();
 	System.out.println("Enter file full path: ");
 	String path = sc.nextLine();
 	
+	
 	try (BufferedReader br = new BufferedReader(new FileReader(path))){
-		
-		Set<LogEntry> set = new HashSet<>();
 		String line = br.readLine();
-		while ( line != null) {
+		while (line != null) { // verificar se tem dados na linha
 			String[] fields = line.split(",");
-			String username = fields[0];
-			Date moment = Date.from(Instant.parse(fields[1]));
+			String name = fields[0];
+			int count = Integer.parseInt(fields[1]);
+			if (votes.containsKey(name)) {
+				int votesSoFar = votes.get(name);
+				votes.put(name, count + votesSoFar);
+			}
+			else {
+				votes.put(name, count);
+			}
 			
-			set.add(new LogEntry(username, moment));
 			line = br.readLine();
 		}
-		System.out.println("Total users:  "+set.size());
+		
+		for (String key : votes.keySet()) {
+			System.out.println(key + ": " + votes.get(key));
+		}
 	}catch(IOException e) {
 		System.out.println("Error: "+ e.getMessage());
 	}
 	sc.close();
 }
-
 }
