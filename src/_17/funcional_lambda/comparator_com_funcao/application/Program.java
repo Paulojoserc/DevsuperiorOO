@@ -15,10 +15,10 @@ public class Program {
 		list.add(new Product("Tablet", 450.00));
 		
 		//Comparator<Product> comp = (p1, p2) -> {
-			//return p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
+			//return p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase()); 3) resumida 
 		//};
 			
-			//*new Comparator<Product>() {
+			//*new Comparator<Product>() { 2)modelo não resumido 
 			//@Override
 			//public int compare(Product p1, Product p2) {
 			//return p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
@@ -27,7 +27,7 @@ public class Program {
 		
 		list.sort((p1, p2)->p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase()));
 		
-		//list.sort(new MyComparator());
+		//list.sort(new MyComparator()); 1) dependendo da classe MyComparator
 		
 		for (Product p : list) {
 			System.out.println(p);
