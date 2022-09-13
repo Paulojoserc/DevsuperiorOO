@@ -6,6 +6,7 @@ import java.util.List;
 import _17.funcional_lambda.primeira_ordem.entities.Product;
 
 public class Program {
+	//Função de compração
 	public static int compareProducts(Product p1, Product p2) {
 		return p1.getPrice().compareTo(p2.getPrice());
 		}
@@ -14,6 +15,8 @@ public class Program {
 		list.add(new Product("TV", 900.00));
 		list.add(new Product("Notebook", 1200.00));
 		list.add(new Product("Tablet", 450.00));
+		
+		//função acima é argumento desta função 
 		list.sort(Program::compareProducts);
 		list.forEach(System.out::println);
 		}
