@@ -1,7 +1,6 @@
 package _17.funcional_lambda.comparator_com_funcao.application;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 import _17.funcional_lambda.comparator_com_funcao.model.entities.Product;

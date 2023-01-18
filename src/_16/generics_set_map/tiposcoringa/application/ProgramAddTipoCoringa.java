@@ -5,6 +5,7 @@ import java.util.List;
 
 public class ProgramAddTipoCoringa {
 	public static void main(String[] args) {
+	@SuppressWarnings("unused")
 	List<?> list = new ArrayList<Integer>();
 //	list.add(3); // erro de compilação
 	}
